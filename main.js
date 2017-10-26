@@ -30,13 +30,13 @@ function updateCoffees(e) {
     console.log(selectedRoast);
     coffees.forEach(function(coffee) {
         if (selectedRoast === "all" ){
-            if (coffee.name.indexOf(coffeeFromText.value) > -1) {
+            if (coffee.name.toLowerCase().indexOf(coffeeFromText.value.toLowerCase()) > -1) {
                 filteredCoffees.push(coffee);
             }
         }
 
         if (coffee.roast === selectedRoast) {
-            if (coffee.name.indexOf(coffeeFromText.value) > -1) {
+            if (coffee.name.toLowerCase().indexOf(coffeeFromText.value.toLowerCase()) > -1) {
                 filteredCoffees.push(coffee);
             }
         }
