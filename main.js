@@ -29,40 +29,27 @@ function updateCoffees(e) {
     var filteredCoffees = [];
     console.log(selectedRoast);
     coffees.forEach(function(coffee) {
-        // if (selectedRoast === "all" ){
-        //     filteredCoffees.push(coffee)
-        // }
-        if (coffee.name.indexOf(coffeeFromText.value) > -1) {
-            // console.log(coffeeFromText.value);
+        if (selectedRoast === "all" ){
+            if (coffee.name.indexOf(coffeeFromText.value) > -1) {
                 filteredCoffees.push(coffee);
-
+            }
         }
+
         if (coffee.roast === selectedRoast) {
-            filteredCoffees.push(coffee);
+            if (coffee.name.indexOf(coffeeFromText.value) > -1) {
+                filteredCoffees.push(coffee);
+            }
         }
     });
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
 
-// function returnSelected(e){
-// if (coffeeFromText === coffees.name[]){
-//     return fileredCoffees.push(coffees)
-// }
-// }
 
 function returnSelected() {
     coffees.forEach(function(coffee) {
-        // if (coffee.name.indexOf(coffeeFromText.value) > -1) {
-        //     // console.log(coffeeFromText.value);
-        //
-            updateCoffees();
-        // }
+        updateCoffees();
     });
 }
-
-
-
-
 
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
@@ -82,8 +69,6 @@ var coffees = [
     {id: 13, name: 'Italian', roast: 'dark'},
     {id: 14, name: 'French', roast: 'dark'},
 ];
-
-
 
 
 tbody.innerHTML = renderCoffees(coffees);
