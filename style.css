@@ -11,7 +11,7 @@ td, th {
 .name {
     /*float: left;*/
     margin-right: 10px;
-    font-size: 22px;
+    font-size: 30px;
     font-weight: bold;
 
 }
@@ -23,6 +23,12 @@ td, th {
     /*float: right;*/
 
 
+}
+
+.coffee {
+    /*border: 1px solid red;*/
+    float: left;
+    min-width: 250px;
 }
 
 .Title {
